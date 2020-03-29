@@ -29,7 +29,7 @@ def register(request):
             else:
                 send_mail(
                     'Welcoming to Alumini association',
-                    'Congratulations!! You have successfully registered into Alumini Association. Stay in contact , share your blogs. ',
+                    'Congratulations!!, You have successfully registered into Alumini Association. Stay in contact , share your blogs. Enjoy our services. Thanking You , regards Government College of Engineering Aurangabad ',
                     settings.EMAIL_HOST_USER,
                     [email],
                     fail_silently = False
