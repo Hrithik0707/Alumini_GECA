@@ -11,7 +11,8 @@
         <div class="well">
             <div class="media">
                 <a class="pull-left" href="#">
-                  <img class="media-object" src="{{ post.author.profile.image.url }}">
+                  <img class="rounded-circle z-depth-0" src="{{ post.author.profile.image.url }}"
+                  height="300">
                 </a>
                 <div class="media-body">
                   <a href="{% url 'post-detail' post.id %}"><h4 class="media-heading">{{ post.title }}</h4></a>
