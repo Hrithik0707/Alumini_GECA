@@ -13,9 +13,10 @@ from django.views.generic import (
 )
 # Create your views here.
 
-def index(request):
-    eves = events.objects.all()
-    return render(request,"Alumini/index.html",{'eves':eves})
+class LinkListView(ListView):
+    model = events
+    template_name = 'Alumini/index.html'  # <app>/<model>_<viewtype>.html
+    context_object_name = 'eves'
 
 def event(request):
     return render(request,"Alumini/events.html")
@@ -83,6 +84,8 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == post.author:
             return True
         return False
+    def get_success_url(self):
+        return reverse('blog')
 
 
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
@@ -94,7 +97,8 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
-
+    def get_success_url(self):
+        return reverse('blog')
 
 def contact(request):
     return render(request,'Alumini/contact.html')

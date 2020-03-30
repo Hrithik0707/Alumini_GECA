@@ -5,11 +5,11 @@ from .views import (
     PostCreateView,
     PostUpdateView,
     PostDeleteView,
-    UserPostListView
+    UserPostListView.LinkListView,
 )
 from . import views
 urlpatterns = [
-    path("",views.index,name="Alumini-index"),
+    path("",LinkListView.as_view(),name="Alumini-index"),
     path("blog/",PostListView.as_view(),name='blog'),
     path('user/<str:username>', UserPostListView.as_view(), name='user-posts'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
