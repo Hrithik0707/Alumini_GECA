@@ -67,7 +67,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('Alumini/blog.html')
+        return reverse('blog')
     
 
 class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
