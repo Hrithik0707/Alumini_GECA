@@ -1,11 +1,10 @@
 {% extends "Alumini/base.html" %}
-{% load staticfiles %}
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="container" style="padding-top: 80px">
 <div class="media">
     <img src="{{ user.profile.image.url }}" class="rounded-circle z-depth-0"
-              alt="{% static 'Alumini/img/clg/default.png' %}" height="100">
+              alt="Add image" height="100">
     <div class="media-body">
       <h3 class="mt-0 font-weight-bold">{{ user.username }}</h3>
      {{ user.email}}
