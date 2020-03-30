@@ -5,7 +5,8 @@ from .views import (
     PostCreateView,
     PostUpdateView,
     PostDeleteView,
-    UserPostListView.LinkListView,
+    UserPostListView,
+    LinkListView,
 )
 from . import views
 urlpatterns = [
