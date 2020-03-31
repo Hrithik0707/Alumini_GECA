@@ -34,7 +34,6 @@ urlpatterns = [
     path("about/",a_views.about,name='about'),
     path("principal_messages/",a_views.princi,name='princi'),
     path("help/",a_views.help,name='help'),
-    path("add/",a_views.add,name='add'),
     path('',include('Alumini.urls')),
     path('password-reset/',
          auth_views.PasswordResetView.as_view(
